@@ -1,6 +1,6 @@
 ---
 name: orchestrated-verification
-description: 测试视角验证（固定阶段）
+description: 测试视角验证（固定阶段）。所有流程都必须经过的测试验证阶段。基于 architecture 阶段的 API 契约设计测试用例，逐项验证并产出 PASS/FAIL 报告。
 ---
 
 # orchestrated-verification

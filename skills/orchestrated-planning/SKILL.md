@@ -1,6 +1,6 @@
 ---
 name: orchestrated-planning
-description: 职能识别 + 执行计划生成
+description: 职能识别与执行计划生成。当进入规划阶段时使用，分析任务识别所需职能组合，产出包含职能分配。并行机会识别与用户确认。必须在 architecture 阶段前完成。
 ---
 
 # orchestrated-planning

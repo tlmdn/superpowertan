@@ -1,6 +1,6 @@
 ---
 name: orchestrated-delivery
-description: 最终交付汇总 + 产出门户
+description: 最终交付汇总与产出门户。打包各阶段交付物，产出用户使用文档和最终交付报告。确保老板或用户能清晰了解完整交付内容。
 ---
 
 # orchestrated-delivery

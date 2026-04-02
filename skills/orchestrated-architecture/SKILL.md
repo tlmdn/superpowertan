@@ -1,6 +1,6 @@
 ---
 name: orchestrated-architecture
-description: 系统设计 + API 契约产出
+description: 系统设计与 API 契约产出。当进入架构设计阶段时使用，调用架构师角色产出系统设计文档、数据模型、API 契约。定义清晰的接口供后续 implementation 阶段使用。
 ---
 
 # orchestrated-architecture

@@ -1,6 +1,6 @@
 ---
 name: orchestrated-integration
-description: 最终联调 + 交付
+description: 最终联调与交付。前后端联调验证完整流程，产出部署指南和最终交付确认。确保所有组件集成正常。
 ---
 
 # orchestrated-integration

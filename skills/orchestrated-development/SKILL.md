@@ -1,6 +1,6 @@
 ---
 name: orchestrated-development
-description: AI 任务编排开发框架主入口 - 输入任务，触发完整开发流程
+description: AI 任务编排开发框架主入口。当用户请求开发完整功能、模块或系统时使用本 skill，例如"开发一个用户注册功能"、"实现订单管理模块"、"构建内部管理系统"。触发条件：用户提到设计+编码+测试的完整开发流程，或明确要求按规划→架构→实现→验证→集成→交付的六阶段执行。绝对要在任何实现开始前调用本 skill。
 ---
 
 # orchestrated-development

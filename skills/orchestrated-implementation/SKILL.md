@@ -1,6 +1,6 @@
 ---
 name: orchestrated-implementation
-description: 职能执行 + 自我校验
+description: 职能执行与自我校验。各职能按自身工作流程执行开发任务，完成后对照交付模板进行自我校验。确保每个交付物符合标准格式才视为完成。
 ---
 
 # orchestrated-implementation
