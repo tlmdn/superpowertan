@@ -19,51 +19,42 @@ AI 任务编排开发框架 —— SP 外层 + 职能层执行纪律。
 
 ## 安装
 
-### 方式一：本地链接（推荐用于开发）
+### 自动安装（推荐）
 
 ```bash
-# 1. 克隆或复制项目到本地
-git clone https://github.com/your-repo/superpowertan.git /path/to/superpowertan
-
-# 2. 链接到 Claude Code skills 目录
-mkdir -p ~/.claude/skills/superpowertan
-ln -s /path/to/superpowertan/skills/* ~/.claude/skills/superpowertan/
+cd /path/to/superpowertan
+./install.sh
 ```
 
-### 方式二：直接复制
+安装脚本会自动：
+1. 转换 skills 文件结构
+2. 创建插件缓存
+3. 注册插件到 Claude Code
+4. 更新 settings.json
 
-如果你不需要更新，只是使用：
-
-```bash
-# 复制 skills 到 Claude Code 配置目录
-cp -r /path/to/superpowertan/skills/* ~/.claude/skills/
-```
+然后**重启 Claude Code** 使插件生效。
 
 ### 验证安装
 
-在 Claude Code 中运行：
-
+重启后运行：
 ```
 /skills
 ```
 
 应该能看到 `superpowertan` 下的 7 个 skill。
 
-## 使用方式
-
-### 激活主 skill
+### 使用方式
 
 ```
-/skill superpowertan:orchestrated-development
+/skill orchestrated-development
 ```
 
-然后直接输入你的开发任务：
-
+然后直接输入你的开发任务，例如：
 ```
 开发一个 TODO 列表功能（前端 + 后端）
 ```
 
-### 流程阶段
+## 流程阶段
 
 ```
 用户任务
