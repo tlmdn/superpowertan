@@ -15,10 +15,11 @@ superpowertan/
 ├── skills/                              # Skill 定义
 │   ├── orchestrated-development.md       # 主入口
 │   ├── orchestrated-planning.md          # 职能识别 + 计划生成
-│   ├── orchestrated-architecture.md     # 系统设计
-│   ├── orchestrated-implementation.md    # 执行 + 自我校验
-│   ├── orchestrated-verification.md     # 测试视角（固定加入）
-│   └── orchestrated-integration.md       # 最终交付
+│   ├── orchestrated-architecture.md       # 系统设计
+│   ├── orchestrated-implementation.md     # 执行 + 自我校验
+│   ├── orchestrated-verification.md      # 测试视角（含循环机制）
+│   ├── orchestrated-integration.md        # 最终联调
+│   └── orchestrated-delivery.md           # 交付汇总
 └── agency-agents-zh/                    # 角色库（180 个 AI 角色 MD）
     ├── engineering/                      # 工程开发类
     ├── testing/                         # 测试质量类
@@ -37,11 +38,30 @@ superpowertan/
 
 ## 流程阶段
 
+```
+planning ──→ architecture ──→ implementation ──→ verification
+                                                    ↓
+                            有 bug？ ←─── 是 ──→ implementation
+                              ↓ 否
+                          integration ──→ delivery
+```
+
 1. **planning** - LLM 判断需要的职能组合，生成执行计划
 2. **architecture** - 架构师产出系统设计 + API 契约
 3. **implementation** - 各职能按自身流程执行，自我校验后交付
 4. **verification** - 测试工程师验证（固定阶段）
+   - 🔴 1级 + 🟡 2级 bug > 0 → 循环回 implementation
+   - 仅 🟢 3级 bug 或无 bug → 进入 integration
 5. **integration** - 最终联调交付
+6. **delivery** - 交付汇总 + 用户文档
+
+## 循环机制
+
+verification ↔ implementation 循环：
+- 🔴 1级 bug 必须修复
+- 🟡 2级 bug 应该修复
+- 🟢 3级 bug 可忽略
+- 每次循环记录 bug 上下文，携带给 implementation
 
 ## 职能识别规则
 
